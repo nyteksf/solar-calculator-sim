@@ -1016,3 +1016,11 @@ MODAL CONFIRM CODE END HERE
   background: #E6E6E6 !important;
   height: 33px !important;
 }
+
+.ul__function {
+  margin-top: 8px;
+}
+
+.ul__function--li {
+  margin-bottom: 4px;
+}
