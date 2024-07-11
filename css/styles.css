@@ -18,14 +18,17 @@ body {
 
 .readMeTitle {
   margin-bottom: 4px;
+  letter-spacing: -0.6px;
 }
 
 .readMeHeader {
   margin-bottom: 4px;
+  letter-spacing: -0.4px;
 }
 
 .readMeTxt {
   margin-bottom: 12px;
+  line-height: 1.2;
 }
 
 .container {
