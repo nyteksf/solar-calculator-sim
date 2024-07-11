@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Solar Calculator</title>
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+        <link rel="stylesheet" href="./css/alertify.core.css" type="text/css" />
+        <link
+            rel="stylesheet"
+            href="./css/alertify.default.css"
+            type="text/css"
+        />
+        <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="./js/app.js" defer></script>
+        <script src="./js/alertify.min.js"></script>
+        <link
+            href="https://fonts.googleapis.com/css?family=Pacifico"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:700"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Raleway:700"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script
+            type="text/javascript"
+            src="https://l2.io/ip.js?var=userip"
+        ></script>
+    </head>
+    <body>
+        <div class="shadow"></div>
+
+        <div class="container">
+            <div class="container__left container__child">
+                <input type="checkbox" name="switch" id="switch" />
+                <label class="switch" id="lightSwitch" for="switch"
+                    ><span id="textSwitch">ON</span></label
+                >
+                
+                <audio id="switchClickSound" preload="auto">
+                    <source
+                        src="http://www.soundjay.com/switch/switch-24.wav"
+                    />
+                </audio>
+            </div>
+            <div id="container__main" class="container__child">
+                <div id="calculator">
+                    <div id="topBlock">
+                        <p id="title">NytekSF</p>
+                        <p id="header">ELECTRONIC CALCULATOR <sup>v3.0</sup></p>
+                    </div>
+                    <div class="screen">
+                        <div id="offState"></div>
+                        <div class="onState">
+                            <span class="screenText"></span>
+                        </div>
+                    </div>
+                    <div id="allButtons">
+                        <div id="column">
+                            <div id="firstRow">
+                                <button
+                                    class="genButton redButton"
+                                    id="onButton"
+                                >
+                                    <p id="pElement">
+                                        <sup>ON</sup><big>/</big><sub>AC</sub>
+                                    </p>
+                                </button>
+                                <div id="solarPanel">
+                                    <div class="panel"></div>
+                                    <div class="panel"></div>
+                                    <div class="panel"></div>
+                                    <div class="panel"></div>
+                                </div>
+                            </div>
+                            <div id="break"></div>
+                        </div>
+                        <div class="row">
+                            <button class="genButton redButton" id="offButton">
+                                OFF
+                            </button>
+                            <button class="genButton redButton" id="ecButton">
+                                EC
+                            </button>
+                            <button class="genButton" id="percentButton">
+                                %
+                            </button>
+                            <button id="pi" class="genButton func" value="?">
+                                π
+                            </button>
+                            <button id="sqrt" class="genButton func" value="^">
+                                √
+                            </button>
+                        </div>
+                        <div class="row">
+                            <button id="mr" class="genButton func" value="MR">
+                                MR
+                            </button>
+                            <button
+                                id="mrPlus"
+                                class="genButton func"
+                                value="MR+"
+                            >
+                                M+
+                            </button>
+                            <button
+                                id="mMinus"
+                                class="genButton func"
+                                value="MR-"
+                            >
+                                M-
+                            </button>
+                            <button
+                                type="button"
+                                id="multiply"
+                                class="genButton operators"
+                                value="*"
+                            >
+                                ×
+                            </button>
+                            <button
+                                id="abc"
+                                type="button"
+                                class="genButton func"
+                                value="abc"
+                            >
+                                <sub>a</sub><sup>b/c</sup>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <input
+                                type="button"
+                                id="seven"
+                                class="genButton"
+                                value="7"
+                            />
+                            <input
+                                type="button"
+                                id="eight"
+                                class="genButton"
+                                value="8"
+                            />
+                            <input
+                                type="button"
+                                id="nine"
+                                class="genButton"
+                                value="9"
+                            />
+                            <button
+                                type="button"
+                                id="subtract"
+                                class="genButton operators"
+                                value="-"
+                            >
+                                -
+                            </button>
+                            <button
+                                id="x3"
+                                type="button"
+                                class="genButton func"
+                                value="x3"
+                            >
+                                x<sup>3</sup>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <input
+                                type="button"
+                                id="four"
+                                class="genButton"
+                                value="4"
+                            />
+                            <input
+                                type="button"
+                                id="five"
+                                class="genButton"
+                                value="5"
+                            />
+                            <input
+                                type="button"
+                                id="six"
+                                class="genButton"
+                                value="6"
+                            />
+                            <button
+                                id="divide"
+                                class="genButton operators"
+                                value="/"
+                            >
+                                ÷
+                            </button>
+                            <button
+                                id="xy"
+                                class="genButton operators"
+                                value="xy"
+                            >
+                                x<sup>y</sup>
+                            </button>
+                        </div>
+                        <div class="row">
+                            <input
+                                type="button"
+                                id="one"
+                                class="genButton one"
+                                value="1"
+                            />
+                            <input
+                                type="button"
+                                id="two"
+                                class="genButton"
+                                value="2"
+                            />
+                            <input
+                                type="button"
+                                id="three"
+                                class="genButton"
+                                value="3"
+                            />
+                        </div>
+                        <div id="finRow">
+                            <input
+                                type="button"
+                                class="genButton"
+                                id="zero"
+                                value="0"
+                            />
+                            <input
+                                type="button"
+                                id="decimal"
+                                class="genButton"
+                                value="."
+                            />
+                            <button
+                                class="genButton"
+                                id="posneg"
+                                value="posneg"
+                            >
+                                <small>+/<big>-</big></small>
+                            </button>
+                            <button
+                                class="genButton operators"
+                                id="plusButton"
+                                value="+"
+                            >
+                                +
+                            </button>
+                            <button
+                                class="genButton operators"
+                                id="equalsButton"
+                                value="="
+                            >
+                                =
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container__right container__child">
+                <div id="readMeDiv">
+                    <div id="centeredTextDiv">
+                        <p id="magicText">Read Me Before Using!</p>
+                        <h1>
+                            <p class="readMeTitle">
+                                Instructions for This Calculator:
+                            </p>
+                        </h1>
+                        <h2>
+                            <p class="readMeHeader">Project Summary:</p>
+                        </h2>
+                        <p class="readMeTxt">
+                            This web app was made to represent a fully
+                            functioning replica of a basic solar-powered
+                            calculator, and was inspired by a freeCodeCamp
+                            challenge. Its usage supports the various basic
+                            mathematical functions. Feel free to additionally 
+                            switch off the left-adjacent light switch to 
+                            to see what happens, if curious.
+                        </p>
+                        <h2>
+                            <p class="readMeHeader">Special Function Keys:</p>
+                        </h2>
+                        <p class="readMeTxt">
+                            <u>ON/AC:</u> If currently 'off', then it
+                            initializes the calculator. If calculator is already
+                            'on', clears all variables and the screen itself.
+                        </p>
+                        <p class="readMeTxt">
+                            <u>OFF:</u> Switches the calculator to its 'off'
+                            state.
+                        </p>
+                        <p class="readMeTxt">
+                            <u>EC:</u> Clears only the last inputted variable as
+                            a whole.
+                        </p>
+                        <h2>
+                            <p class="readMeTxt">
+                                <i
+                                    >This Virtual Calculator Supports the
+                                    Following Operations:</i
+                                >
+                            </p>
+                            <p class="readMeHeader">Basic Operations:</p>
+                        </h2>
+                        <div class="readMeTxt">
+                            <ul>
+                                <li>
+                                    <u>Addition ('+'):</u> Performs addition
+                                </li>
+                                <li>
+                                    <u>Subtraction ('-'):</u> Performs
+                                    subtraction
+                                </li>
+                                <li>
+                                    <u>Multiplication ('*'):</u> Performs
+                                    multiplication
+                                </li>
+                                <li>
+                                    <u>Division ('/'):</u> Performs division
+                                </li>
+                                <li>
+                                    <u>Pos/Neg ('+/-'):</u> Performs sign change
+                                </li>
+                                <li>
+                                    <u>Decimal ('.'):</u> Performs addition of a
+                                    decimal point
+                                </li>
+                                <li>
+                                    <u>Equals ('='):</u>
+                                    <ul>
+                                        <b>Function:</b>
+                                        <li>
+                                            If you're adding together two given
+                                            integers, then upon the completion
+                                            of their input you may press the
+                                            'equals' key to return your result
+                                            to the screen in the normal,
+                                            expected fashion.
+                                        </li>
+                                        <li>
+                                            If you wish to continue your
+                                            equation in the form of a flowing
+                                            chain of operations, press an
+                                            operator button after pressing
+                                            equals and then another number.
+                                            Similarly, begin entering in a third
+                                            or a fourth number, and so forth, ad
+                                            infinitum.
+                                        </li>
+                                        <li>
+                                            Worth noting is a third option of
+                                            pressing the equal button after
+                                            chaining together any number of the
+                                            above operations. In such a case the
+                                            result of your growing equation will
+                                            accumulate without any need for
+                                            additional pressing of equals. This
+                                            math is handled automagically by the
+                                            code.
+                                        </li>
+                                    </ul>
+
+                                    <div id="footer">
+                                        <input type="button" id="twitt-ico" />
+                                        <input type="button" id="github-ico" />
+                                        <input
+                                            type="button"
+                                            id="jsfiddle-ico"
+                                        />
+                                        <input
+                                            type="button"
+                                            id="sendMail-ico"
+                                        />
+                                        <a
+                                            id="bookmark-this"
+                                            href="#"
+                                            title="Bookmark This Page"
+                                            ><input
+                                                type="button"
+                                                id="bookmark-ico"
+                                        /></a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- MODAL CODE BEGINS HERE -->
+
+                            <p id="ip"></p>
+
+                            <div class="hideMe">
+                                <a
+                                    href="https://twitter.com/intent/follow?screen_name=nyteksf"
+                                    id="trigger"
+                                    onclick='window.open(this.href,"popupwindow", "width=555,height=590,left=200,top=5,scrollbars,toolbar=0,resizable"); return false;'
+                                    target="_blank"
+                                    >FOLLOW ME</a
+                                >
+                            </div>
+
+                            <!-- MODAL CODE ENDS HERE -->
+                            <a
+                                href="https://fiddle.jshell.net/nytek/jxdyvxaw/embedded/result/dark/"
+                                id="hiddenBookmarkLink"
+                                title="nyteksf electronic calculator v3.0"
+                                rel="sidebar"
+                                >Bookmark This Page</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
