@@ -912,18 +912,12 @@ MODAL CONFIRM CODE END HERE
 #bookmark-ico {
   height: 32px;
   width: 32px;
-  background: url(http://i67.tinypic.com/ta1opy.png);
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   outline: none;
   filter: brightness(85%);
-  -webkit-filter: brightness(85%);
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  transition: all .5s ease;
+  transition: all 500ms ease;
 }
 
 #bookmark-ico:hover {
