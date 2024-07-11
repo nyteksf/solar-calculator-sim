@@ -530,19 +530,14 @@ $(".operators").not("#equalsButton").click(setOperator);
 
 
 var audio = $("#switchClickSound")[0];
+//alert(audio); //CHECK OUT RESULT
 
 $("#lightSwitch").click(function() { //The Switchs innards:
   $(".shadow").toggle();
   audio.play();
 
-  // TOGGLE THE CSS "SWITCH"
-  if ($("#switch")[0].checked === true) {
-    $("#switch")[0].checked = false;
-  } else {
-    $("#switch")[0].checked = true;
-  }
-
   if (power) { //Power off calc with lights
+    //$("#onState").css('opacity', '0');
     power = "off";
     $(".screenText").addClass("turnedOff");
     $(".onScreen").addClass("powerDown");
@@ -653,8 +648,34 @@ $(document).ready(function() {
   var fontsize;
   var readMeDivHeight;
 
-  //REPLACE BELOW WITH ALERTIFY CONTENT:
-  $(".shadow").hide();
+  var Opera = (navigator.userAgent.match(/Opera|OPR\//) ? true : false);
+
+  if (Opera === true) {
+    $(".shadow").css('width', '112.5%').hide();
+    fontsize = "'100%'";
+  } else if (navigator.userAgent.indexOf("Chrome") != -1) {
+    $(".shadow").css('width', '112.5%').hide();
+    fontsize = "'100%'";
+  } else if (navigator.userAgent.indexOf("Firefox") != -1) {
+    fontsize = "'95%'";
+    $("#magicText").css('left', '55px');
+    $(".shadow").css('width', '120.4%').hide();
+  } else if ((navigator.userAgent.indexOf("MSIE") != -1) || (!!document.documentMode === true)) //IF IE > 10
+  {
+    $(".shadow").css('width', '113%').hide();
+    fontsize = "'100%'";
+  } else if (navigator.userAgent.indexOf("Safari") != -1) {
+    alert('Safari Detected: BROWSER MODE UNTESTED');
+    $(".shadow").css('height', '507px').hide();
+    $(".shadow").css('width', '100%').hide();
+    fontsize = "'100%'";
+  } else {
+    alert("UNDETECTABLE BROWSER IN USE: DEFAULT MODE ACTIVATED");
+    fontsize = "'100%'";
+    //REPLACE BELOW WITH ALERTIFY CONTENT:
+    $(".shadow").css('width', '100%').hide();
+    $(".shadow").addClass("makeClickable");
+  }
   $(".shadow").addClass("makeClickable");
   $('body').css('font-size', fontsize);
 });
@@ -664,7 +685,7 @@ $(document).ready(function() {
 /*
 MODAL CONFIRM CODE BEGIN HERE
 */
-
+/*
 $(document).ready(function() {
     alertify.set({
         labels: {
@@ -742,9 +763,9 @@ $('.alertify-button, .alertify-button:hover, .alertify-button:focus, .alertify-b
         $('.alertify-button-cancel, .alertify-button-cancel:hover, .alertify-button-cancel:focus, .alertify-button-cancel:active').addClass('new-alertify-button-cancel');
         }
 
-
+*/
 /* Hack to otherwise ensure button doesn't lose its pop-through graphic on first run */
-var lastFocus;
+/*var lastFocus;
 
 $('body').mouseover(function(e) {
     e.preventDefault();
@@ -800,6 +821,7 @@ MODAL CONFIRM CODE END HERE
 
 
 /* COOKIES: to-be-installed therewith; settable colors, storable themes */
+/*
 var cookieName;
 var tmpOutput;
 
@@ -969,3 +991,4 @@ $('#bookmark-this, #button-ico').click(function(e) {
   }
   console.log("6");
 });
+*/
