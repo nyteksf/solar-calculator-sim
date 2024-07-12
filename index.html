@@ -7,7 +7,10 @@
         <link rel="icon" href="./assets/jclogo3.png" type="image/png" />
         <link rel="stylesheet" href="./css/styles.css" type="text/css" />
         <link rel="stylesheet" href="./css/alertify.core.css" type="text/css" />
-        <script src="https://kit.fontawesome.com/f42fa95770.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/f42fa95770.js"
+            crossorigin="anonymous"
+        ></script>
         <link
             rel="stylesheet"
             href="./css/alertify.default.css"
@@ -50,7 +53,7 @@
                 <label class="switch" id="lightSwitch" for="switch"
                     ><span id="textSwitch">ON</span></label
                 >
-                
+
                 <audio id="switchClickSound" preload="auto">
                     <source
                         src="http://www.soundjay.com/switch/switch-24.wav"
@@ -273,144 +276,64 @@
                 <div id="readMeDiv">
                     <div id="centeredTextDiv">
                         <p id="magicText">Read Me Before Using!</p>
-                        <h1>
-                            <p class="readMeTitle">
-                                Instructions for This Calculator:
-                            </p>
+                        <h1 class="readMeTitle">
+                            Instructions for This Calculator:
                         </h1>
-                        <h2>
-                            <p class="readMeHeader">Project Summary:</p>
-                        </h2>
+                        <h2 class="readMeHeader">Project Summary:</h2>
                         <p class="readMeTxt">
                             This web app was made to represent a fully
                             functioning replica of a basic solar-powered
                             calculator, and was inspired by a freeCodeCamp
                             challenge. Its usage supports the various basic
-                            mathematical functions. Feel free to additionally 
-                            switch off the left-adjacent light switch to 
-                            to see what happens to the screen and general 
-                            functionality, if curious.
+                            mathematical functions. Feel free to additionally
+                            switch off the left-adjacent light switch to
+                            simulate darkness.
                         </p>
-                        <h2>
-                            <p class="readMeHeader">Special Function Keys:</p>
-                        </h2>
+                        <h2 class="readMeHeader">Special Function Keys:</h2>
                         <p class="readMeTxt">
                             <u>ON/AC:</u> If currently 'off', then it
                             initializes the calculator. If calculator is already
                             'on', clears all variables and the screen itself.
                         </p>
                         <p class="readMeTxt">
-                            <u>OFF:</u> Switches the calculator to its 'off'
-                            state.
-                        </p>
-                        <p class="readMeTxt">
                             <u>EC:</u> Clears only the last inputted variable as
                             a whole.
                         </p>
-                        <h2>
-                            <p class="readMeTxt">
-                                <i
-                                    >This Virtual Calculator Supports the
-                                    Following Operations:</i
-                                >
-                            </p>
-                            <p class="readMeHeader">Basic Operations:</p>
-                        </h2>
-                        <div class="readMeTxt">
-                            <ul>
-                                <li>
-                                    <u>Addition ('+'):</u> Performs addition
-                                </li>
-                                <li>
-                                    <u>Subtraction ('-'):</u> Performs
-                                    subtraction
-                                </li>
-                                <li>
-                                    <u>Multiplication ('*'):</u> Performs
-                                    multiplication
-                                </li>
-                                <li>
-                                    <u>Division ('/'):</u> Performs division
-                                </li>
-                                <li>
-                                    <u>Pos/Neg ('+/-'):</u> Performs sign change
-                                </li>
-                                <li>
-                                    <u>Decimal ('.'):</u> Performs addition of a
-                                    decimal point
-                                </li>
-                                <li>
-                                    <u>Equals ('='):</u>
-                                </ul>
-                                <ul class="ul__function">
-                                        <b><h2>Function:</h2></b>
-                                        <li class="ul__function--li">
-                                            If you're adding together two given
-                                            integers, then upon the completion
-                                            of their input you may press the
-                                            'equals' key to return your result
-                                            to the screen in the normal,
-                                            expected fashion.
-                                        </li>
-                                        <li class="ul__function--li">
-                                            If you wish to continue your
-                                            equation in the form of a flowing
-                                            chain of operations, press an
-                                            operator button after pressing
-                                            equals and then another number.
-                                            Similarly, begin entering in a third
-                                            or a fourth number, and so forth, ad
-                                            infinitum.
-                                        </li>
-                                        <li class="ul__function--li">
-                                            Worth noting is a third option of
-                                            pressing the equal button after
-                                            chaining together any number of the
-                                            above operations. In such a case the
-                                            result of your growing equation will
-                                            accumulate without any need for
-                                            additional pressing of equals. This
-                                            math is handled automagically by the
-                                            code.
-                                        </li>
-                                    </ul>
 
-                                    <div id="footer">
-                                        <a
-                                            class="btn__go-top"
-                                            href="#"
-                                            title="Back to top"
-                                            >
-                                                <button id="bookmark-ico">
-                                                    <i class="fa-solid fa-arrow-up"></i>
-                                                </button>
-                                        </a>
-                                    </div>
+                        <div class="readMeTxt">
+                            <ul class="ul__function">
+                                <h2>Function:</h2>
+                                <li class="ul__function--li">
+                                    If you're adding together two given
+                                    integers, then upon the completion of their
+                                    input you may press the 'equals' key to
+                                    return your result to the screen in the
+                                    normal, expected fashion.
+                                </li>
+                                <li class="ul__function--li">
+                                    If you wish to continue your equation in the
+                                    form of a flowing chain of operations, after
+                                    pressing the equals button, press an
+                                    operator button and then enter another
+                                    number. Similarly, one can continue without
+                                    pressing equals by pressing an operator
+                                    button, then entering in another number,
+                                    followed by pressing another operator
+                                    button, and so forth, ad infinitum.
                                 </li>
                             </ul>
 
-                            <!-- MODAL CODE BEGINS HERE -->
-
-                            <p id="ip"></p>
-
-                            <div class="hideMe">
+                            <div id="footer">
                                 <a
-                                    href="https://twitter.com/intent/follow?screen_name=nyteksf"
-                                    id="trigger"
-                                    onclick='window.open(this.href,"popupwindow", "width=555,height=590,left=200,top=5,scrollbars,toolbar=0,resizable"); return false;'
-                                    target="_blank"
-                                    >FOLLOW ME</a
+                                    class="btn__go-top"
+                                    href="#"
+                                    title="Back to top"
                                 >
+                                    <button id="bookmark-ico">
+                                        <i class="fa-solid fa-arrow-up"></i>
+                                    </button>
+                                </a>
                             </div>
-
-                            <!-- MODAL CODE ENDS HERE -->
-                            <a
-                                href="https://fiddle.jshell.net/nytek/jxdyvxaw/embedded/result/dark/"
-                                id="hiddenBookmarkLink"
-                                title="nyteksf electronic calculator v3.0"
-                                rel="sidebar"
-                                >Bookmark This Page</a
-                            >
                         </div>
                     </div>
                 </div>
