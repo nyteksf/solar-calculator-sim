@@ -45,299 +45,326 @@
         ></script>
     </head>
     <body>
-        <div class="shadow"></div>
+        <section id="container__main">
+            <div class="shadow"></div>
 
-        <div class="container">
-            <div class="container__left container__child">
-                <input type="checkbox" name="switch" id="switch" />
-                <label class="switch" id="lightSwitch" for="switch"
-                    ><span id="textSwitch">ON</span></label
-                >
+            <div class="container">
+                <div class="container__left container__child">
+                    <input type="checkbox" name="switch" id="switch" />
+                    <label class="switch" id="light-switch" for="switch"
+                        ><span id="text-switch">ON</span></label
+                    >
 
-                <audio id="switchClickSound" preload="auto">
-                    <source
-                        src="http://www.soundjay.com/switch/switch-24.wav"
-                    />
-                </audio>
-            </div>
-            <div id="container__main" class="container__child">
-                <div id="calculator">
-                    <div id="topBlock">
-                        <p id="title">NytekSF</p>
-                        <p id="header">ELECTRONIC CALCULATOR <sup>v3.0</sup></p>
-                    </div>
-                    <div class="screen">
-                        <div id="offState"></div>
-                        <div class="onState">
-                            <span class="screenText"></span>
+                    <audio id="switch-click-sound" preload="auto">
+                        <source
+                            src="http://www.soundjay.com/switch/switch-24.wav"
+                        />
+                    </audio>
+                </div>
+                <div id="container__main" class="container__child">
+                    <div id="calculator">
+                        <div id="top-block">
+                            <p id="title">NytekSF</p>
+                            <p id="header">
+                                ELECTRONIC CALCULATOR <sup>v3.0</sup>
+                            </p>
+                        </div>
+                        <div class="screen">
+                            <div id="off-state"></div>
+                            <div class="on-state">
+                                <span class="screen-text"></span>
+                            </div>
+                        </div>
+                        <div id="all-buttons">
+                            <div id="column">
+                                <div id="first-row">
+                                    <button
+                                        class="button__gen button__red"
+                                        id="on-button"
+                                    >
+                                        <p id="p-element">
+                                            <sup>ON</sup><big>/</big
+                                            ><sub>AC</sub>
+                                        </p>
+                                    </button>
+                                    <div id="solar-panel">
+                                        <div class="panel"></div>
+                                        <div class="panel"></div>
+                                        <div class="panel"></div>
+                                        <div class="panel"></div>
+                                    </div>
+                                </div>
+                                <div id="break"></div>
+                            </div>
+                            <div class="row">
+                                <button
+                                    class="button__gen button__red"
+                                    id="off-button"
+                                >
+                                    OFF
+                                </button>
+                                <button
+                                    class="button__gen button__red"
+                                    id="ec-button"
+                                >
+                                    EC
+                                </button>
+                                <button class="button__gen" id="percent-button">
+                                    %
+                                </button>
+                                <button
+                                    id="pi"
+                                    class="button__gen func"
+                                    value="?"
+                                >
+                                    π
+                                </button>
+                                <button
+                                    id="sqrt"
+                                    class="button__gen func"
+                                    value="^"
+                                >
+                                    √
+                                </button>
+                            </div>
+                            <div class="row">
+                                <button
+                                    id="mr"
+                                    class="button__gen func"
+                                    value="MR"
+                                >
+                                    MR
+                                </button>
+                                <button
+                                    id="mr-plus"
+                                    class="button__gen func"
+                                    value="MR+"
+                                >
+                                    M+
+                                </button>
+                                <button
+                                    id="m-minus"
+                                    class="button__gen func"
+                                    value="MR-"
+                                >
+                                    M-
+                                </button>
+                                <button
+                                    type="button"
+                                    id="multiply"
+                                    class="button__gen operators"
+                                    value="*"
+                                >
+                                    ×
+                                </button>
+                                <button
+                                    id="abc"
+                                    type="button"
+                                    class="button__gen func"
+                                    value="abc"
+                                >
+                                    <sub>a</sub><sup>b/c</sup>
+                                </button>
+                            </div>
+                            <div class="row">
+                                <input
+                                    type="button"
+                                    id="seven"
+                                    class="button__gen"
+                                    value="7"
+                                />
+                                <input
+                                    type="button"
+                                    id="eight"
+                                    class="button__gen"
+                                    value="8"
+                                />
+                                <input
+                                    type="button"
+                                    id="nine"
+                                    class="button__gen"
+                                    value="9"
+                                />
+                                <button
+                                    type="button"
+                                    id="subtract"
+                                    class="button__gen operators"
+                                    value="-"
+                                >
+                                    -
+                                </button>
+                                <button
+                                    id="x3"
+                                    type="button"
+                                    class="button__gen func"
+                                    value="x3"
+                                >
+                                    x<sup>3</sup>
+                                </button>
+                            </div>
+                            <div class="row">
+                                <input
+                                    type="button"
+                                    id="four"
+                                    class="button__gen"
+                                    value="4"
+                                />
+                                <input
+                                    type="button"
+                                    id="five"
+                                    class="button__gen"
+                                    value="5"
+                                />
+                                <input
+                                    type="button"
+                                    id="six"
+                                    class="button__gen"
+                                    value="6"
+                                />
+                                <button
+                                    id="divide"
+                                    class="button__gen operators"
+                                    value="/"
+                                >
+                                    ÷
+                                </button>
+                                <button
+                                    id="xy"
+                                    class="button__gen operators"
+                                    value="xy"
+                                >
+                                    x<sup>y</sup>
+                                </button>
+                            </div>
+                            <div class="row">
+                                <input
+                                    type="button"
+                                    id="one"
+                                    class="button__gen one"
+                                    value="1"
+                                />
+                                <input
+                                    type="button"
+                                    id="two"
+                                    class="button__gen"
+                                    value="2"
+                                />
+                                <input
+                                    type="button"
+                                    id="three"
+                                    class="button__gen"
+                                    value="3"
+                                />
+                            </div>
+                            <div id="finRow">
+                                <input
+                                    type="button"
+                                    class="button__gen"
+                                    id="zero"
+                                    value="0"
+                                />
+                                <input
+                                    type="button"
+                                    id="decimal"
+                                    class="button__gen"
+                                    value="."
+                                />
+                                <button
+                                    class="button__gen"
+                                    id="posneg"
+                                    value="posneg"
+                                >
+                                    <small>+/<big>-</big></small>
+                                </button>
+                                <button
+                                    class="button__gen operators"
+                                    id="plusButton"
+                                    value="+"
+                                >
+                                    +
+                                </button>
+                                <button
+                                    class="button__gen operators"
+                                    id="equalsButton"
+                                    value="="
+                                >
+                                    =
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div id="allButtons">
-                        <div id="column">
-                            <div id="firstRow">
-                                <button
-                                    class="genButton redButton"
-                                    id="onButton"
-                                >
-                                    <p id="pElement">
-                                        <sup>ON</sup><big>/</big><sub>AC</sub>
-                                    </p>
-                                </button>
-                                <div id="solarPanel">
-                                    <div class="panel"></div>
-                                    <div class="panel"></div>
-                                    <div class="panel"></div>
-                                    <div class="panel"></div>
+                </div>
+                <div class="container__right container__child">
+                    <div id="read-me__div">
+                        <div id="centered-text-div">
+                            <p id="magic-text">Read Me Before Using!</p>
+                            <h1 class="read-me__title">
+                                Instructions for This Calculator:
+                            </h1>
+                            <h2 class="read-me__header">Project Summary:</h2>
+                            <p class="read-me__para">
+                                This web app was made to represent a fully
+                                functioning replica of a basic solar-powered
+                                calculator, and was inspired by a freeCodeCamp
+                                challenge. Its usage supports the various basic
+                                mathematical functions. Feel free to
+                                additionally switch off the left-adjacent light
+                                switch to simulate darkness.
+                            </p>
+                            <h2 class="read-me__header">
+                                Special Function Keys:
+                            </h2>
+                            <p class="read-me__para">
+                                <u>ON/AC:</u> If currently 'off', then it
+                                initializes the calculator. If calculator is
+                                already 'on', clears all variables and the
+                                screen itself.
+                            </p>
+                            <p class="read-me__para">
+                                <u>EC:</u> Clears only the last inputted
+                                integer.
+                            </p>
+
+                            <div class="read-me__para">
+                                <ul class="ul__function">
+                                    <h2 class="read-me__header">Function:</h2>
+                                    <li class="ul__function--li">
+                                        If you're adding together two given
+                                        integers, then upon the completion of
+                                        their input you may press the 'equals'
+                                        key to return your result to the screen
+                                        in the normal, expected fashion.
+                                    </li>
+                                    <li class="ul__function--li">
+                                        If you wish to continue your equation in
+                                        the form of a flowing chain of
+                                        operations, after pressing the equals
+                                        button, press an operator button and
+                                        then enter another number. Similarly,
+                                        one can continue without pressing equals
+                                        by pressing an operator button, then
+                                        entering in another number, followed by
+                                        pressing another operator button, and so
+                                        forth, ad infinitum.
+                                    </li>
+                                </ul>
+
+                                <div id="footer">
+                                    <a
+                                        class="btn__go-top"
+                                        href="#"
+                                        title="Back to top"
+                                    >
+                                        <button id="bookmark-ico">
+                                            <i class="fa-solid fa-arrow-up"></i>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
-                            <div id="break"></div>
-                        </div>
-                        <div class="row">
-                            <button class="genButton redButton" id="offButton">
-                                OFF
-                            </button>
-                            <button class="genButton redButton" id="ecButton">
-                                EC
-                            </button>
-                            <button class="genButton" id="percentButton">
-                                %
-                            </button>
-                            <button id="pi" class="genButton func" value="?">
-                                π
-                            </button>
-                            <button id="sqrt" class="genButton func" value="^">
-                                √
-                            </button>
-                        </div>
-                        <div class="row">
-                            <button id="mr" class="genButton func" value="MR">
-                                MR
-                            </button>
-                            <button
-                                id="mrPlus"
-                                class="genButton func"
-                                value="MR+"
-                            >
-                                M+
-                            </button>
-                            <button
-                                id="mMinus"
-                                class="genButton func"
-                                value="MR-"
-                            >
-                                M-
-                            </button>
-                            <button
-                                type="button"
-                                id="multiply"
-                                class="genButton operators"
-                                value="*"
-                            >
-                                ×
-                            </button>
-                            <button
-                                id="abc"
-                                type="button"
-                                class="genButton func"
-                                value="abc"
-                            >
-                                <sub>a</sub><sup>b/c</sup>
-                            </button>
-                        </div>
-                        <div class="row">
-                            <input
-                                type="button"
-                                id="seven"
-                                class="genButton"
-                                value="7"
-                            />
-                            <input
-                                type="button"
-                                id="eight"
-                                class="genButton"
-                                value="8"
-                            />
-                            <input
-                                type="button"
-                                id="nine"
-                                class="genButton"
-                                value="9"
-                            />
-                            <button
-                                type="button"
-                                id="subtract"
-                                class="genButton operators"
-                                value="-"
-                            >
-                                -
-                            </button>
-                            <button
-                                id="x3"
-                                type="button"
-                                class="genButton func"
-                                value="x3"
-                            >
-                                x<sup>3</sup>
-                            </button>
-                        </div>
-                        <div class="row">
-                            <input
-                                type="button"
-                                id="four"
-                                class="genButton"
-                                value="4"
-                            />
-                            <input
-                                type="button"
-                                id="five"
-                                class="genButton"
-                                value="5"
-                            />
-                            <input
-                                type="button"
-                                id="six"
-                                class="genButton"
-                                value="6"
-                            />
-                            <button
-                                id="divide"
-                                class="genButton operators"
-                                value="/"
-                            >
-                                ÷
-                            </button>
-                            <button
-                                id="xy"
-                                class="genButton operators"
-                                value="xy"
-                            >
-                                x<sup>y</sup>
-                            </button>
-                        </div>
-                        <div class="row">
-                            <input
-                                type="button"
-                                id="one"
-                                class="genButton one"
-                                value="1"
-                            />
-                            <input
-                                type="button"
-                                id="two"
-                                class="genButton"
-                                value="2"
-                            />
-                            <input
-                                type="button"
-                                id="three"
-                                class="genButton"
-                                value="3"
-                            />
-                        </div>
-                        <div id="finRow">
-                            <input
-                                type="button"
-                                class="genButton"
-                                id="zero"
-                                value="0"
-                            />
-                            <input
-                                type="button"
-                                id="decimal"
-                                class="genButton"
-                                value="."
-                            />
-                            <button
-                                class="genButton"
-                                id="posneg"
-                                value="posneg"
-                            >
-                                <small>+/<big>-</big></small>
-                            </button>
-                            <button
-                                class="genButton operators"
-                                id="plusButton"
-                                value="+"
-                            >
-                                +
-                            </button>
-                            <button
-                                class="genButton operators"
-                                id="equalsButton"
-                                value="="
-                            >
-                                =
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="container__right container__child">
-                <div id="readMeDiv">
-                    <div id="centeredTextDiv">
-                        <p id="magicText">Read Me Before Using!</p>
-                        <h1 class="readMeTitle">
-                            Instructions for This Calculator:
-                        </h1>
-                        <h2 class="readMeHeader">Project Summary:</h2>
-                        <p class="readMeTxt">
-                            This web app was made to represent a fully
-                            functioning replica of a basic solar-powered
-                            calculator, and was inspired by a freeCodeCamp
-                            challenge. Its usage supports the various basic
-                            mathematical functions. Feel free to additionally
-                            switch off the left-adjacent light switch to
-                            simulate darkness.
-                        </p>
-                        <h2 class="readMeHeader">Special Function Keys:</h2>
-                        <p class="readMeTxt">
-                            <u>ON/AC:</u> If currently 'off', then it
-                            initializes the calculator. If calculator is already
-                            'on', clears all variables and the screen itself.
-                        </p>
-                        <p class="readMeTxt">
-                            <u>EC:</u> Clears only the last inputted variable as
-                            a whole.
-                        </p>
-
-                        <div class="readMeTxt">
-                            <ul class="ul__function">
-                                <h2>Function:</h2>
-                                <li class="ul__function--li">
-                                    If you're adding together two given
-                                    integers, then upon the completion of their
-                                    input you may press the 'equals' key to
-                                    return your result to the screen in the
-                                    normal, expected fashion.
-                                </li>
-                                <li class="ul__function--li">
-                                    If you wish to continue your equation in the
-                                    form of a flowing chain of operations, after
-                                    pressing the equals button, press an
-                                    operator button and then enter another
-                                    number. Similarly, one can continue without
-                                    pressing equals by pressing an operator
-                                    button, then entering in another number,
-                                    followed by pressing another operator
-                                    button, and so forth, ad infinitum.
-                                </li>
-                            </ul>
-
-                            <div id="footer">
-                                <a
-                                    class="btn__go-top"
-                                    href="#"
-                                    title="Back to top"
-                                >
-                                    <button id="bookmark-ico">
-                                        <i class="fa-solid fa-arrow-up"></i>
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </body>
 </html>
