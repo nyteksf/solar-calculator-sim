@@ -272,12 +272,12 @@ function doEquals() {
   $(".screen-text").html(res);
 }
 
-
 function doPercentage() {
   if (second !== "") {
     var answer;
     var percentOfFirst = eval((first * second) / 100);
     var percentage = eval(second / 100);
+    
     counter = 0;
     needsRefresh = true;
 

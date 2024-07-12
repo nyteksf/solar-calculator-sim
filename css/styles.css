@@ -1034,3 +1034,22 @@ MODAL CONFIRM CODE END HERE
 .ul__function--li {
   margin-bottom: 4px;
 }
+
+@media (max-width: 768px) {
+  #container__main {
+    margin: 0 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .container__child {
+    flex: 1;
+    margin: 25px 0;
+  }
+}
